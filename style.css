@@ -1,0 +1,89 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Variáveis de cor */
+  :root {
+    --bg: #f2f6f9;
+    --card: #ffffff;
+    --primary: #072f56;
+    --primary-hover: #042341;
+    --text: #333333;
+    --border: #cccccc;
+    --radius: 4px;
+    --spacing: 1rem;
+    --font: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--spacing);
+  }
+  
+  .container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: calc(var(--spacing) * 1.5);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: var(--spacing);
+    color: var(--primary);
+    font-size: 1.5rem;
+  }
+  
+  .field-group {
+    margin-bottom: var(--spacing);
+  }
+  
+  .field-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .field-group input,
+  .field-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Responsividade simples */
+  @media (min-width: 480px) {
+    .container {
+      padding: calc(var(--spacing) * 2);
+    }
+  }
